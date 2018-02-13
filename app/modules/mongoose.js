@@ -1,5 +1,7 @@
 var mongoose = require('mongoose')
 
+require('dotenv').config()
+
 mongoose.connect(process.env.MONGO)
 
 var db = mongoose.connection
