@@ -1,32 +1,32 @@
 extends layout
 block register
-	div(class="navbar is-warning is-fixed-top")
-		div(class="navbar-brand") 
-			a(href="/" class="navbar-item title") todo
-	div(class="section")
-		div(class="container")
-			div(class="" style="width: 320px;margin:auto")
-				form(action="/register" method="post")
-					div(class="media-content")
-						div(class="content")
-							p(class="subtitle") Register
-							div(class="field")
-								label(class="label") Username
-								p(class="control")
-									input(type="text" class="input" placeholder="Username" name="username")
-							div(class="filed")
-								label(class="label") Password
-								p(class="control")
-									input(type="password" class="input" placeholder="Password" name="password")
-						div(class="field is-grouped")
-							p(class="control")
-								a(href="/login" class="button") Login
-							p(class="control")
-								button(type="submit" class="button is-warning") Submit
-	br
-	- if(!flash) {
-		div
-	- } else {
-		div(class="notification is-danger" style="max-width: 340px; margin: auto")
-			p(class="content")=flash
-	- }
+  div(class="navbar is-warning is-fixed-top")
+    div(class="navbar-brand") 
+      a(href="/" class="navbar-item title") todo
+  div(class="section")
+    div(class="container")
+      div(class="" style="width: 320px;margin:auto")
+        form(action="/register" method="post")
+          div(class="media-content")
+            div(class="content")
+              p(class="subtitle") Register
+              div(class="field")
+                label(class="label") Username
+                p(class="control")
+                  input(type="text" class="input" placeholder="Username" name="username")
+              div(class="filed")
+                label(class="label") Password
+                p(class="control")
+                  input(type="password" class="input" placeholder="Password" name="password")
+            div(class="field is-grouped")
+              p(class="control")
+                a(href="/login" class="button") Login
+              p(class="control")
+                button(type="submit" class="button is-warning") Submit
+  br
+  - if(!flash) {
+    div
+  - } else {
+    div(class="notification is-danger" style="max-width: 340px; margin: auto")
+      p(class="content")=flash
+  - }

@@ -1,24 +1,24 @@
 extends home
 block dash
-	section(class="section")
-		div(class="container")
-			div(class="title") Welecome #{username}
-			div(class="subtitle") Manage List
+  section(class="section")
+    div(class="container")
+      div(class="title") Welecome #{username}
+      div(class="subtitle") Manage List
 
-			a(href="/create_new_list" class="button") Create New List
+      a(href="/create_new_list" class="button") Create New List
 
-			table(class="table")
-				tr(class="tr")
-					th(class=""): <i class="fa fa-times"></i>
-					th(class="th") List Name
-					th(class="") Date Created
-					th(class="") Items
-				- for(list in lists){
-					tr(class="tr")
-						td: i(class="fa fa-times" onclick="deleteList(this.innerText)" title="Delete List" ): span(style="z-index:-99; position:absolute")=lists[list].id
-						td(title="Edit List"): a(href="/todo?id=" + lists[list].id) #{lists[list].title}
-						td=lists[list].date
-						td=lists[list].txt.length
-				- }
+      table(class="table")
+        tr(class="tr")
+          th(class=""): <i class="fa fa-times"></i>
+          th(class="th") List Name
+          th(class="") Date Created
+          th(class="") Items
+        - for(list in lists){
+          tr(class="tr")
+            td: i(class="fa fa-times" onclick="deleteList(this.innerText)" title="Delete List" ): span(style="z-index:-99; position:absolute")=lists[list].id
+            td(title="Edit List"): a(href="/todo?id=" + lists[list].id) #{lists[list].title}
+            td=lists[list].date
+            td=lists[list].txt.length
+        - }
 
-	script(src="/js/dash.client.js")
+  script(src="/js/dash.client.js")

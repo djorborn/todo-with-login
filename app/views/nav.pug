@@ -1,22 +1,22 @@
 nav(class="navbar is-success is-fixed-top")#nav
-	div(class="navbar-brand")
-		a(href="/" class="navbar-item is-large") todo
-		span(class="navbar-burger burger" id="burger")
-			span
-			span
-			span
-	div(class="navbar-menu" id="menu")
-		div(class="navbar-start")
-			a(href="/" class="navbar-item") Home
-			a(href="/create_new_list" class="navbar-item") Create New List
-		div(class="navbar-end")
-			a(href="logout" class="navbar-item") Logout
-			a(href="http://bulma.io" target="_blank" class="navbar-item")
-				img(src="/images/made-with-bulma.png" alt="Made With Bulma" width="128" height="24")
+  div(class="navbar-brand")
+    a(href="/" class="navbar-item is-large") todo
+    span(class="navbar-burger burger" id="burger")
+      span
+      span
+      span
+  div(class="navbar-menu" id="menu")
+    div(class="navbar-start")
+      a(href="/" class="navbar-item") Home
+      a(href="/create_new_list" class="navbar-item") Create New List
+    div(class="navbar-end")
+      a(href="logout" class="navbar-item") Logout
+      a(href="http://bulma.io" target="_blank" class="navbar-item")
+        img(src="/images/made-with-bulma.png" alt="Made With Bulma" width="128" height="24")
 
-	script.
-		var burger = document.getElementById("burger");
-		var menu = document.getElementById("menu");
-		burger.onclick = function(){
-			menu.classList.toggle("is-active");
-		}
+  script.
+    var burger = document.getElementById("burger");
+    var menu = document.getElementById("menu");
+    burger.onclick = function(){
+      menu.classList.toggle("is-active");
+    }
