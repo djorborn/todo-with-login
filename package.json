@@ -1,0 +1,33 @@
+{
+  "name": "todo-with-login",
+  "version": "1.0.0",
+  "description": "todo app with login and list dashboard",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "djorborn",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djorborn/todo-with-login.git"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "express",
+    "nodejs",
+    "bulma"
+  ],
+  "bugs": {
+    "url": "https://github.com/djorborn/todo-with-login/issues"
+  },
+  "homepage": "https://github.com/djorborn/todo-with-login#readme"
+}
