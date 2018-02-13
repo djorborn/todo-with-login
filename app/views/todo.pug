@@ -1,0 +1,24 @@
+extends home
+block todo
+	div(class="section")
+		div(class="container")
+
+			div(class="panel" style="max-width: 340px; margin: auto" id="list")
+				input(class="panel-heading input" contenteditable="true" id="list_title" value=list_title placeholder="New List...")
+				div(class="panel-block")
+					div(class="field has-addons")
+						div(class="control")
+							input(type="text" class="input" id="new_item" placeholder="Enter New Item")
+						div(class="control")
+							button(id="new_item_btn" class="button") Add
+				- for(var i = 0; i < items.length; i++){
+					div(class="panel-block items")
+						.media
+							.media-left
+								i(class="fa fa-times" onclick="deleteItem("+i+")")
+							.media-content
+								.content=items[i]
+				- }
+
+	script(src="http://dep:4243/bower_components/jquery-ui/jquery-ui.js")
+	script(src="/js/todo.client.js")
